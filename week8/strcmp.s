@@ -41,8 +41,8 @@ done2:
 	mov	pc, lr
 done_not_same:
 	mov	r6, #-1
-	mov	pc, lr
+	mov	pc, r8
 	
 	
-string1:	.asciz	"bri"
-string2:	.asciz	"bra"
+string1:	.asciz	"bring"
+string2:	.asciz	"bri"
