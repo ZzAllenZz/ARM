@@ -2,8 +2,8 @@
 	.align	    2
 	.global	    _start
 _start:
-	ldr	r0, =matrix
-	mov r1, #0;
+	ldr	r0, =matrix   @r0 matix
+	mov r1, #0;       @r1 = i
     bl  _loop1
     ldr r6,[r0,#44] @b2
     ldr r7,[r0,#40] @M(22)
@@ -29,7 +29,7 @@ _start:
 _loop1:
     stmfd sp!, {lr}
 
-    add r2, r1, #1
+    add r2, r1, #1 @r2 = j
     bl _loop2
     add r1,r1, #1
 
@@ -43,8 +43,8 @@ _loop1:
 _loop2:
     stmfd sp!, {lr}
 
-    mov r3, r1
-    mov r4, r1
+    mov r3, r1 @k
+    mov r4, r1 @k
     ldr r5, =coeff
 
     bl  _loop3
