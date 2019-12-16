@@ -26,3 +26,4 @@ _fibloop:
         mov   r0,  r2
 	ldmia	sp!, {r1-r3}
         mov   pc,  lr
+
